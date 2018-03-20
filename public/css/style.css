@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #F9AC67
+}
+
+.wrapper {
+  width: 90%;
+  margin-top: 2.5rem;
+  background-color: #ECE6CD;
+  padding: 15px;
+  border-radius: 1rem
+}
+
+.wrapper div.cont_box {
+  margin-bottom: 10px;
+  padding: 10px
+}
+
+.wrapper div.cont_box input, select {
+  height: 2rem;
+  width: 15rem;
+  outline: none;
+  border: 0;
+  border-radius: 0.7rem;
+  margin: 0.2rem;
+  padding-left: 0.2rem;
+  background-color: white;
+}
+
+.wrapper button {
+  height: 2rem;
+  width: 5rem;
+  border: 0;
+  border-radius: 0.7rem;
+  background-color: #EE6A59;
+  color: black;
+  cursor: pointer;
+}
+
+.wrapper div.cont_box h2{
+  margin-bottom: 1rem;
+  color: #3A3F58
+}
+
+header div.nav {
+  height: 40px;
+  background-color: #ECE6CD;
+  width: 100%;
+}
+
+header div.nav .logo {
+background-image: url('/img/logo.png');
+background-size: 8rem;
+height: 40px;
+background-position: left;
+background-repeat: no-repeat;
+margin-left: 5%
+}
+
+.wrapper_bottom {
+  width: 100%;
+  text-align: center;
+}
