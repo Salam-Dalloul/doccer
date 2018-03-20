@@ -39,6 +39,7 @@ router.post('/surve-contract', (req, res) => {
         stack: error.stack,
         properties: error.properties,
     }
+    // handle this!
     console.log(e.properties.errors);
   }
 
@@ -65,10 +66,13 @@ router.post('/search-org', (req, res) => {
       org_city: orgData.ppoststed,
       org_address: orgData.postadresse,
     }
+    // do something else
     res.end()
   })
   .catch((err) => {
+    // handle this
     console.log(err);
   })
 })
+
 module.exports = router;
