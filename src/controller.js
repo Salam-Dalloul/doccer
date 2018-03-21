@@ -29,7 +29,11 @@ router.post('/surve-contract', (req, res) => {
   const doc = new Docxtemplater().loadZip(zip)
 
   doc.setData(inputsValues);
-  doc.render()
+  try {
+    doc.render()
+  } catch(err) {
+    console.log(err.properties.errors);
+  }
 
   const buf = doc.getZip()
                .generate({type:"nodebuffer"});
@@ -51,7 +55,7 @@ router.post('/search-org', (req, res) => {
   }
 
   let requiredData = {}
-  
+
   brreg(options)
   .then((result) => {
     const orgData = result.enhetsregisteret.data.entries[0];

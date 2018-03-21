@@ -45,12 +45,16 @@ function search(){
 
 function submit(){
   const inputs = document.querySelectorAll('input');
+  const selects = document.querySelectorAll('select');
   let inputsValues = {}
   inputs.forEach((input) => {
     const inputName = input.attributes.name.nodeValue;
-    const inputValue = input.value
-    return inputsValues[inputName] = inputValue
+    return inputsValues[inputName] = input.value;
   });
+  selects.forEach((select) => {
+    const selectID = select.attributes.id.nodeValue;
+    return inputsValues[selectID] = select.value;
+  })
   postData(inputsValues);
 }
 
