@@ -9,7 +9,6 @@ function postData(inputs){
   })
   .then((response) => response.json())
   .then((result) => {
-    console.log(result.status);
     if(result.status === true){
       window.location.assign('/contract.docx');
     }
@@ -29,9 +28,11 @@ function search(){
   })
   .then((response) => response.json())
   .then(function(data){
+    // use this
     console.log(data);
   })
   .catch(function(error){
+    // handle this error
     console.log(error);
   })
 }
