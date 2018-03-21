@@ -51,16 +51,19 @@ router.post('/search-org', (req, res) => {
   }
 
   let requiredData = {}
+  
   brreg(options)
   .then((result) => {
     const orgData = result.enhetsregisteret.data.entries[0];
     requiredData = {
       org_name: orgData.navn,
-      org_city: orgData.ppoststed,
-      org_address: orgData.postadresse,
+      org_city: orgData.forradrpoststed,
+      org_address: orgData.forretningsadr,
+      org_postnr: orgData.forradrpostnr,
+      // org_contact: orgData.Kontaktperson
     }
     // do something else
-    res.end()
+    res.json(requiredData)
   })
   .catch((err) => {
     // handle this

@@ -1,3 +1,5 @@
+const select = (element) => document.querySelector(element);
+
 function postData(inputs){
   fetch('/surve-contract', {
     method: 'POST',
@@ -28,8 +30,12 @@ function search(){
   })
   .then((response) => response.json())
   .then(function(data){
-    // use this
-    console.log(data);
+    const { org_name, org_address, org_city, org_postnr } = data;
+    select('#org_name').value = org_name;
+    select('#org_city').value = org_city;
+    select('#org_address').value = org_address;
+    select('#org_postnr').value = org_postnr;
+    // select('#org_contact').value = org_contact;
   })
   .catch(function(error){
     // handle this error
