@@ -35,7 +35,7 @@ router.post('/surve-contract', (req, res) => {
                .generate({type:"nodebuffer"});
 
   const fileName = "contract.docx";
-  const filePath = path.join(__dirname, '..', 'contract.docx');
+  const filePath = path.join(__dirname, '..', 'public','contract.docx');
 
   fs.writeFileSync(filePath, buf);
 
