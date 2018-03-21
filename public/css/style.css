@@ -9,13 +9,13 @@
 }
 
 body {
-  background-color: #F9AC67
+  background-color: #EEE
 }
 
 .wrapper {
   width: 90%;
   margin-top: 2.5rem;
-  background-color: #ECE6CD;
+  background-color: #E4E4E4;
   padding: 15px;
   border-radius: 1rem
 }
@@ -41,19 +41,20 @@ body {
   width: 5rem;
   border: 0;
   border-radius: 0.7rem;
-  background-color: #EE6A59;
-  color: black;
+  background-color: #cc071e;
+  color: white;
+  font-weight: bolder;
   cursor: pointer;
 }
 
 .wrapper div.cont_box h2{
   margin-bottom: 1rem;
-  color: #3A3F58
+  color: #333333
 }
 
 header div.nav {
   height: 40px;
-  background-color: #ECE6CD;
+  background-color: #E4E4E4;
   width: 100%;
 }
 
