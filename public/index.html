@@ -9,19 +9,29 @@
     <header>
       <div class="nav">
         <div class="logo">
-
         </div>
       </div>
     </header>
     <section class="wrapper">
       <section class="container">
         <div class="cont_box legal_owner_1">
-          <h2>JURIDISK EIER/Legal Owner</h2>
+          <h2>JURIDISK EIER</h2>
           <div class="upper">
-            <input type="text" name="org_nr" id='org_nr' aria-label="Org. nr." placeholder="Org. nr." isRequired>
-            <button type="button" name="search" id="search">Search</button>
+            <div class="search_form">
+              <input type="text" name="org_nr" id="org_nr" aria-label="Org. nr." placeholder="Org. nr." isRequired>
+              <button type="button" name="search" id="search">SØKE</button>
+            </div>
+            <div>
+              <h3>Fyll ved søk</h3>
+              <input type="text" name="org_name" id="org_name" aria-label="Firmanavn" placeholder="Firmanavn">
+              <input type="text" name="org_city" id="org_city" aria-label="Poststed" placeholder="Poststed">
+              <input type="text" name="org_address" id="org_address" aria-label="Adresse" placeholder="Adresse">
+              <input type="text" name="org_postnr" id="org_postnr" aria-label="Postnr." placeholder="Postnr.">
+              <input type="text" name="org_contact" id="org_contact" aria-label="Kontaktperson" placeholder="Kontaktperson">
+            </div>
           </div>
-          <div class="bottom">
+          <div>
+            <h3>Fyll manuelt</h3>
             <input type="text" name="position" aria-label="Stilling" placeholder="Stilling" value="">
             <input type="text" name="contact_email" aria-label="E-post kontaktperson" placeholder="E-post kontaktperson" value="">
             <input type="text" name="contact_tele" aria-label="Telefon kontaktperson" placeholder="Telefon kontaktperson" value="">
@@ -348,10 +358,10 @@
         <!-- JURIDISK EIER values 1,2 -->
         <!-- Navn medblokkbokstaver page-6 - value: 4-->
         <div class="wrapper_bottom">
-          <button type="button" name="submit" id="submit">Submit</button>
+          <button type="button" name="submit" id="submit">SENDE INN</button>
         </div>
       </section>
     </section>
-    <script src='js/submit.js'></script>
+    <script src="js/submit.js"></script>
   </body>
 </html>
