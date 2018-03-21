@@ -6,7 +6,15 @@ function postData(inputs){
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(inputs)
-  });
+  })
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result.status);
+    if(result.status === true){
+      window.location.assign('/contract.docx');
+    }
+  })
+  .catch((err) => alert(err.message));
 }
 
 function search(){

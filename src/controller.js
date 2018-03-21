@@ -29,26 +29,19 @@ router.post('/surve-contract', (req, res) => {
   const doc = new Docxtemplater().loadZip(zip)
 
   doc.setData(inputsValues);
-  try {
-    doc.render()
-  }
-  catch (error) {
-    var e = {
-        message: error.message,
-        name: error.name,
-        stack: error.stack,
-        properties: error.properties,
-    }
-    // handle this!
-    console.log(e.properties.errors);
-  }
+  doc.render()
 
   const buf = doc.getZip()
                .generate({type:"nodebuffer"});
 
-  fs.writeFileSync(__dirname+"/contract.docx",buf);
-  res.download(path.join(__dirname, 'contract.docx'))
+  const fileName = "contract.docx";
+  const filePath = path.join(__dirname, '..', 'contract.docx');
+
+  fs.writeFileSync(filePath, buf);
+
+  res.json({status: true});
 });
+
 
 router.post('/search-org', (req, res) => {
   const { orgNum } = req.body;
