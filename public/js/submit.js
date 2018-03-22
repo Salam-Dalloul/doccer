@@ -19,7 +19,7 @@ function postData(inputs){
 }
 
 function search(){
-  const orgNum = document.querySelector('#org_nr').value
+  const orgNum = select('#org_nr').value;
   fetch('/search-org', {
     method: 'POST',
     headers: {
@@ -30,18 +30,24 @@ function search(){
   })
   .then((response) => response.json())
   .then(function(data){
-    const { org_name, org_address, org_city, org_postnr } = data;
+    const { org_name, org_address, org_city, org_postnr, org_contact } = data;
     select('#org_name').value = org_name;
     select('#org_city').value = org_city;
     select('#org_address').value = org_address;
     select('#org_postnr').value = org_postnr;
-    // select('#org_contact').value = org_contact;
+    const orgNameOptions = document.querySelectorAll('option');
+    orgNameOptions.forEach((option) => {
+      if (option.attributes.name && option.attributes.name.nodeValue === 'org_name') {
+        option.value = org_name;
+        option.textContent = org_name;
+      };
+    });
   })
   .catch(function(error){
-    // handle this error
+    // handle me
     console.log(error);
-  })
-}
+  });
+};
 
 function submit(){
   const inputs = document.querySelectorAll('input');
@@ -54,14 +60,14 @@ function submit(){
   selects.forEach((select) => {
     const selectID = select.attributes.id.nodeValue;
     return inputsValues[selectID] = select.value;
-  })
+  });
   postData(inputsValues);
-}
+};
 
 
-document.querySelector('#submit').addEventListener("click", function(){
+select('#submit').addEventListener("click", function(){
   submit();
-})
-document.querySelector('#search').addEventListener("click", function(){
+});
+select('#search').addEventListener("click", function(){
   search();
-})
+});
