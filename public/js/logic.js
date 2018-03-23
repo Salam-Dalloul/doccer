@@ -54,12 +54,29 @@ function submit(){
   const selects = document.querySelectorAll('select');
   let inputsValues = {}
   inputs.forEach((input) => {
-    const inputName = input.attributes.name.nodeValue;
+    let inputName;
+    if (input.attributes.name) {
+      inputName = input.attributes.name.nodeValue;
+    }
     return inputsValues[inputName] = input.value;
   });
-  selects.forEach((select) => {
+  selects.forEach((select, index) => {
     const selectID = select.attributes.id.nodeValue;
-    return inputsValues[selectID] = select.value;
+    if (!select.value) {
+      let requiredElement = '';
+      if (index <= 7) {
+        requiredElement = `jur_u`;
+      } else if (index >7 && index <=21) {
+        requiredElement = `jur_sub`;
+      } else if (index >21 && index <=28) {
+        requiredElement = `jur_bb`
+      }
+      requiredElement += `${selectID.split('_')[2]}`
+      const newValue = document.querySelector(`#${requiredElement}`);
+      inputsValues[selectID] = newValue.value;
+    } else {
+      inputsValues[selectID] = select.value;
+    }
   });
   postData(inputsValues);
 };

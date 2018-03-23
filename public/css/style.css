@@ -27,9 +27,8 @@ body {
 
 .wrapper div.cont_box input, select {
   height: 2rem;
-  width: 15rem;
-  outline: none;
-  border: 0;
+  width: 12rem;
+  border: 1px solid #808080cc;
   border-radius: 0.7rem;
   margin: 0.2rem;
   padding-left: 0.2rem;

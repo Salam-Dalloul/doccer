@@ -6,12 +6,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header>
+    <!-- <header>
       <div class="nav">
         <div class="logo">
         </div>
       </div>
-    </header>
+    </header> -->
     <section class="wrapper">
       <section class="container">
         <div class="cont_box legal_owner_1">
@@ -39,16 +39,16 @@
         </div>
         <div class="cont_box services">
           <h2>TJENESTER, PRISER OG BINDINGSTIDER</h2>
-          <input type="text" name="mobile_phone" aria-label="Mobiltelefoni" placeholder="Mobiltelefoni" value="">
-          <input type="text" name="mobile_broadband" aria-label="Mobilt Bredbånd" placeholder="Mobilt Bredbånd" value="">
-          <input type="text" name="mobile_network" aria-label="Fasttelefoni" placeholder="Fasttelefoni" value="">
+          <input type="text" name="mob_phone" aria-label="Mobiltelefoni" placeholder="Mobiltelefoni" value="">
+          <input type="text" name="mob_bb" aria-label="Mobilt Bredbånd" placeholder="Mobilt Bredbånd" value="">
+          <input type="text" name="mob_net" aria-label="Fasttelefoni" placeholder="Fasttelefoni" value="">
           <input type="text" name="ip_tele" aria-label="IP-telefoni" placeholder="IP-telefoni" value="">
-          <input type="text" name="corporate_network" aria-label="Phonero Bedriftsnett" placeholder="Phonero Bedriftsnett" value="">
+          <input type="text" name="corp_net" aria-label="Phonero Bedriftsnett" placeholder="Phonero Bedriftsnett" value="">
         </div>
         <div class="cont_box factura">
           <h2>FAKTURA OG TILLEGGSTJENESTER</h2>
           <input type="text" name="e_post" aria-label="E-post for faktura" placeholder="E-post for faktura" value="">
-          <input type="text" name="agreed_purchase" aria-label="Avtalt utkjøp eks. mva." placeholder="Avtalt utkjøp eks. mva." value="">
+          <input type="text" name="purchase" aria-label="Avtalt utkjøp eks. mva." placeholder="Avtalt utkjøp eks. mva." value="">
         </div>
         <div class="cont_box seller">
           <h2>FORHANDLER/SELGER</h2>
@@ -60,17 +60,17 @@
           <h2>SIGNATUR KUNDE</h2>
           <input type="text" name="signature_place" aria-label="Sted og dato" placeholder="Sted og dato" value="">
           <input type="date" name="signature_date" value="">
-          <input type="text" name="customer_name_capitalized" aria-label="Navn med blokkbokstaver" placeholder="Navn med blokkbokstaver" value="">
+          <input type="text" name="c_name_cap" aria-label="Navn med blokkbokstaver" placeholder="Navn med blokkbokstaver" value="">
         </div>
         <div class="cont_box phonero_signature">
           <h2>SIGNATUR PHONERO</h2>
           <input type="text" name="signature_place" aria-label="Sted og dato" placeholder="Sted og dato" value="">
           <input type="date" name="signature_date" value="">
-          <input type="text" name="phonero_name_capitalized" aria-label="Navn med blokkbokstaver" placeholder="Navn med blokkbokstaver" value="">
+          <input type="text" name="ph_name_cap" aria-label="Navn med blokkbokstaver" placeholder="Navn med blokkbokstaver" value="">
         </div>
         <div class="cont_box service_description">
           <h2>TJENESTEBESKRIVELSE</h2>
-          <input type="text" name="primary_nr" aria-label="Hovednummer" placeholder="Hovednummer" value="">
+          <input type="text" name="prime_n" aria-label="Hovednummer" placeholder="Hovednummer" value="">
           <input type="text" name="note" aria-label="Merknad" placeholder="Merknad" value="">
           <input type="text" name="name_of_group" aria-label="Navn på gruppe(r)" placeholder="Navn på gruppe(r)" value="">
           <input type="text" name="welcome_msg" aria-label="Velkomstmelding" placeholder="Velkomstmelding" value="">
@@ -84,83 +84,83 @@
           <div class="users_rows">
             <div class="users_row">
               <input type="text" name="users_name1" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr1" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr1" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob1" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip1" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_1">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u1" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name2" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr2" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr2" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob2" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip2" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_2">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u2" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name3" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr3" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr3" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob3" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip3" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_3">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u3" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name4" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr4" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr4" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob4" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip4" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_4">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u4" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name5" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr5" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr5" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob5" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip5" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_5">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u5" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name6" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr6" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr6" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob6" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip6" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_6">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u6" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name7" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr7" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr7" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob7" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip7" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_7">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u7" placeholder="JEller Legg til ur. eier" value="">
             </div>
             <div class="users_row">
               <input type="text" name="users_name8" aria-label="Navn" placeholder="Navn" value="">
-              <input type="text" name="users_mobile_nr8" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <input type="text" name="users_ip_nr8" aria-label="IP-nr." placeholder="IP-nr." value="">
+              <input type="text" name="u_mob8" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <input type="text" name="u_ip8" aria-label="IP-nr." placeholder="IP-nr." value="">
               <select name="users_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="users_row_8">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_u8" placeholder="JEller Legg til ur. eier" value="">
             </div>
           </div>
         </div>
@@ -169,144 +169,144 @@
           <h2>ABONNEMENT MOBILTELEFONI</h2>
           <div class="subscription_rows">
             <div class="subscription_row">
-              <input type="text" name="subscription_username1" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list1" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr1" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_1">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username1" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list1" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr1" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_1">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub1" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username2" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list2" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr2" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_2">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username2" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list2" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr2" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_2">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub2" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username3" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list3" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr3" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_3">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username3" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list3" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr3" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_3">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub3" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username4" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list4" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr4" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_4">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username4" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list4" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr4" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_4">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub4" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username5" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list5" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr5" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_5">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username5" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list5" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr5" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_5">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub5" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username6" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list6" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr6" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_6">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username6" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list6" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr6" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_6">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub6" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username7" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list7" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr7" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_7">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username7" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list7" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr7" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_7">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub7" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username8" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list8" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr8" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_8">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username8" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list8" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr8" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_8">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub8" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username9" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list9" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr9" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_9">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username9" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list9" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr9" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_9">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub9" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username10" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list10" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr10" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_10">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username10" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list10" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr10" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_10">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub10" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username11" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list11" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr11" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_11">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username11" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list11" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr11" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_11">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub11" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username12" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list12" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr12" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_12">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username12" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list12" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr12" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_12">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub12" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username13" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list13" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr13" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_13">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username13" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list13" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr13" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_13">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub13" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="subscription_row">
-              <input type="text" name="subscription_username14" aria-label="Brukernavn" placeholder="Brukernavn" value="">
-              <input type="text" name="subscription_price_list14" aria-label="Prisliste." placeholder="Prisliste." value="">
-              <input type="text" name="subscription_mobile_nr14" aria-label="Mobilnr." placeholder="Mobilnr." value="">
-              <select name="subscription_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="subscription_row_14">
-                <option value="" label='Jur. eier'></option>
+              <input type="text" name="sub_username14" aria-label="Brukernavn" placeholder="Brukernavn" value="">
+              <input type="text" name="sub_price_list14" aria-label="Prisliste." placeholder="Prisliste." value="">
+              <input type="text" name="sub_mobile_nr14" aria-label="Mobilnr." placeholder="Mobilnr." value="">
+              <select name="sub_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="sub_row_14">
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_sub14" placeholder="Eller Legg til Jur. eier" value="">
             </div>
           </div>
         </div>
@@ -318,64 +318,64 @@
               <input type="text" name="broadband_name1" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address1" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_1">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb1" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="broadband_row">
               <input type="text" name="broadband_name2" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address2" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_2">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb2" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="broadband_row">
               <input type="text" name="broadband_name3" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address3" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_3">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb3" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="broadband_row">
               <input type="text" name="broadband_name4" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address4" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_4">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb4" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="broadband_row">
               <input type="text" name="broadband_name5" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address5" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_5">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb5" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="broadband_row">
               <input type="text" name="broadband_name6" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address6" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_6">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb6" placeholder="Eller Legg til Jur. eier" value="">
             </div>
             <div class="broadband_row">
               <input type="text" name="broadband_name7" aria-label="Brukernavn" placeholder="Brukernavn" value="">
               <input type="text" name="broadband_device_address7" aria-label="Utstyrsadresse" placeholder="Utstyrsadresse" value="">
               <select name="broadband_associated_groups" aria-label="Tilknyttet gruppe(r)" placeholder="Tilknyttet gruppe(r)" id="broadband_row_7">
-                <option value="" label='Jur. eier'></option>
+                <option value="" label='Velge Jur. eier'></option>
                 <option name='org_name'></option>
-                <option value="2">2</option>
               </select>
+              <input type="text" id="jur_bb7" placeholder="Eller Legg til Jur. eier" value="">
             </div>
           </div>
         </div>
@@ -386,6 +386,6 @@
         </div>
       </section>
     </section>
-    <script src="js/submit.js"></script>
+    <script src="js/logic.js"></script>
   </body>
 </html>
