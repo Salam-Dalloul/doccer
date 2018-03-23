@@ -19,7 +19,7 @@
           <div class="upper">
             <div class="search_form">
               <input type="text" name="org_nr" id="org_nr" aria-label="Org. nr." placeholder="Org. nr." isRequired>
-              <button type="button" name="search" id="search">SØKE</button>
+              <button type="button" name="search" id="search">SØK</button>
             </div>
             <div>
               <h3>Fyll ved søk</h3>
@@ -53,17 +53,19 @@
         <div class="cont_box seller">
           <h2>FORHANDLER/SELGER</h2>
           <input type="text" name="seller_name" aria-label="Navn" placeholder="Navn" value="">
-          <input type="text" name="seller_id" aria-label="Selger ID" placeholder="Selger ID" value="">
-          <input type="text" name="sell_date" aria-label="Dato" placeholder="Dato" value="">
+          <input type="text" name="seller_id" aria-label="Forhandler/Selger ID" placeholder="Selger ID" value="">
+          <input type="date" name="sell_date" aria-label="Dato" placeholder="Dato" value="">
         </div>
         <div class="cont_box customer_signature">
           <h2>SIGNATUR KUNDE</h2>
-          <input type="date" name="signature_date" aria-label="Sted og dato" placeholder="Sted og dato" value="">
+          <input type="text" name="signature_place" aria-label="Sted og dato" placeholder="Sted og dato" value="">
+          <input type="date" name="signature_date" value="">
           <input type="text" name="customer_name_capitalized" aria-label="Navn med blokkbokstaver" placeholder="Navn med blokkbokstaver" value="">
         </div>
         <div class="cont_box phonero_signature">
           <h2>SIGNATUR PHONERO</h2>
-          <input type="date" name="signature_date" aria-label="Sted og dato" placeholder="Sted og dato" value="">
+          <input type="text" name="signature_place" aria-label="Sted og dato" placeholder="Sted og dato" value="">
+          <input type="date" name="signature_date" value="">
           <input type="text" name="phonero_name_capitalized" aria-label="Navn med blokkbokstaver" placeholder="Navn med blokkbokstaver" value="">
         </div>
         <div class="cont_box service_description">
@@ -161,7 +163,6 @@
               </select>
             </div>
           </div>
-          <input type="text" name="users_seller_id" aria-label="Forhandler/Selger ID" placeholder="Forhandler/Selger ID" value="">
         </div>
         <!-- JURIDISK EIER values 1,2 -->
         <div class="cont_box subscription_phones">
@@ -377,12 +378,11 @@
               </select>
             </div>
           </div>
-          <input type="text" name="broadband_seller_id" aria-label="Forhandler/Selger ID" placeholder="Forhandler/Selger ID" value="">
         </div>
         <!-- JURIDISK EIER values 1,2 -->
         <!-- Navn medblokkbokstaver page-6 - value: 4-->
         <div class="wrapper_bottom">
-          <button type="button" name="submit" id="submit">SENDE INN</button>
+          <button type="button" name="submit" id="submit">GENERER AVTALE</button>
         </div>
       </section>
     </section>
