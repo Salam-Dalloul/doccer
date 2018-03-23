@@ -81,6 +81,25 @@ function submit(){
   postData(inputsValues);
 };
 
+document.getElementsByName('dublicate').forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    const targetBtn = event.target;
+    const btnID = targetBtn.id;
+    const btnParent = targetBtn.parentElement;
+
+    const targetNavnValue = select(`#users_name${btnID}`).value;
+    const targetMobNrValue = select(`#u_mob${btnID}`).value;
+    const targetSelectValue = select(`#users_row_${btnID}`).value || select(`#jur_u${btnID}`).value;
+
+    const toNavn = select(`#sub_username${btnID}`);
+    const toMobNr = select(`#sub_mobile_nr${btnID}`);
+    const toInput = select(`#jur_sub${btnID}`);
+
+    toNavn.value = targetNavnValue;
+    toMobNr.value = targetMobNrValue;
+    toInput.value = targetSelectValue;
+  })
+})
 
 select('#submit').addEventListener("click", function(){
   submit();
